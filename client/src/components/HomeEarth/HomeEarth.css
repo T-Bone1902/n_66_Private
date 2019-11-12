@@ -1,0 +1,514 @@
+@charset "UTF-8";
+.planet-section {
+  position: relative;
+  background-image: url("./images/bg-map.jpg");
+  background-size: cover;
+  margin: 9rem 0 9rem 0;
+  /* 國家標籤 */
+}
+
+.planet-section .sub-title-small {
+  color: #96daf0;
+  text-align: center;
+  letter-spacing: 0.4375rem;
+  display: block;
+}
+
+.planet-section .main-title-small {
+  color: #242a3a;
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 0 0 4.5rem 0;
+  display: block;
+}
+
+.planet-section .sub-title-big {
+  color: #96daf0;
+  text-align: center;
+  letter-spacing: 0.4375rem;
+  display: none;
+}
+
+.planet-section .main-title-big {
+  color: #242a3a;
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 0 0 4.5rem 0;
+  display: none;
+}
+
+.planet-section .custom-dropdown {
+  margin: auto;
+  width: 280px;
+  height: 63px;
+  position: relative;
+  z-index: 999;
+  display: none;
+}
+
+.planet-section .custom-dropdown .card .card-header {
+  margin: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  text-align: center;
+  cursor: pointer;
+}
+
+.planet-section .custom-dropdown .card .collapse {
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.planet-section .custom-dropdown .card .collapse.show {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.planet-section .custom-dropdown .card .card-selection {
+  text-align: center;
+  padding: 15px 20px;
+  -webkit-transition: .3s;
+  transition: .3s;
+  cursor: pointer;
+}
+
+.planet-section .custom-dropdown .card .card-selection:hover {
+  background-color: #242a3a;
+  color: #fff;
+}
+
+.planet-section .my-container {
+  max-width: 1120px;
+  padding: 0;
+}
+
+.planet-section .planet {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+  height: 100%;
+  /* max-width: 640px;
+        min-height: 640px; */
+}
+
+.planet-section .mask {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 200%;
+  height: 100%;
+  background-color: #fff;
+  opacity: 0;
+  z-index: 2;
+  pointer-events: none;
+  -webkit-transition: .5s;
+  transition: .5s;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+.planet-section .wrapper-1120 {
+  /* max-width: 1140px; */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.planet-section .world-left {
+  position: relative;
+  width: 640px;
+  margin-right: 0;
+}
+
+.planet-section .world-right {
+  position: relative;
+  max-width: 480px;
+  height: 640px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 0px;
+  margin-top: 30px;
+}
+
+.planet-section .right-item {
+  max-width: 480px;
+  width: 400px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 30;
+  opacity: 0;
+  -webkit-transition: .3s ease-out;
+  transition: .3s ease-out;
+}
+
+.planet-section .right-item p {
+  color: #74767d;
+}
+
+.planet-section .right-area {
+  min-width: 100%;
+}
+
+.planet-section .country {
+  display: block;
+  position: absolute;
+  z-index: 10;
+  -webkit-transition: opacity .7s ease-in-out;
+  transition: opacity .7s ease-in-out;
+  opacity: 0;
+}
+
+.planet-section .country:hover {
+  opacity: 1;
+}
+
+.planet-section .russia {
+  display: block;
+  top: 5.5%;
+  right: 5.7%;
+  width: 297px;
+  height: 426px;
+  z-index: 5;
+}
+
+.planet-section .alaska {
+  display: block;
+  top: 3.7%;
+  left: 33.3%;
+  width: 90px;
+  height: 85px;
+  z-index: 11;
+}
+
+.planet-section .canada {
+  display: block;
+  top: 11.5%;
+  left: 4.1%;
+  width: 262px;
+  height: 322px;
+  z-index: 10;
+}
+
+.planet-section .finland {
+  display: block;
+  top: 52.5%;
+  left: 62.2%;
+  width: 41px;
+  height: 75px;
+  z-index: 99;
+}
+
+.planet-section .greenland {
+  display: block;
+  top: 35.5%;
+  left: 27%;
+  width: 155px;
+  height: 147px;
+  z-index: 11;
+}
+
+.planet-section .iceland {
+  display: block;
+  left: 40.3%;
+  bottom: 39%;
+  width: 36px;
+  height: 29px;
+  z-index: 11;
+}
+
+.planet-section .norway {
+  display: block;
+  left: 54.9%;
+  bottom: 31.5%;
+  width: 83px;
+  height: 118px;
+  z-index: 11;
+}
+
+.planet-section .spitzberg {
+  display: block;
+  left: 54.9%;
+  bottom: 52%;
+  width: 25px;
+  height: 41px;
+  z-index: 11;
+}
+
+.planet-section .sweden {
+  display: block;
+  left: 58.3%;
+  bottom: 28.8%;
+  width: 38px;
+  height: 110px;
+  z-index: 11;
+}
+
+.planet-section .country-label {
+  position: absolute;
+  opacity: 1;
+  padding: 0 8px;
+  z-index: 18;
+  border-radius: 2px;
+  text-align: center;
+}
+
+.planet-section .country-name {
+  text-decoration: none !important;
+  color: black;
+}
+
+.planet-section .country-name:hover {
+  color: black;
+}
+
+.planet-section .country-label::before {
+  display: block;
+  content: '';
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  bottom: 0%;
+  background-color: #fff;
+  z-index: -1;
+  opacity: .2;
+  border-radius: 2px;
+  /* pointer-events: none; */
+}
+
+.planet-section .country-progress {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  bottom: 0%;
+  background-color: #fff;
+  z-index: -2;
+  border-radius: 2px;
+  -webkit-transition: .3s;
+  transition: .3s;
+  width: 0;
+  pointer-events: none;
+}
+
+.planet-section .country-label:hover .country-progress {
+  width: 100%;
+}
+
+.planet-section .russia-label {
+  top: 50%;
+  right: 10%;
+  display: block;
+}
+
+.planet-section .alaska-label {
+  top: 5%;
+  left: 37%;
+  display: block;
+}
+
+.planet-section .canada-label {
+  top: 25%;
+  left: 10%;
+  display: block;
+}
+
+.planet-section .finland-label {
+  bottom: 36%;
+  right: 25%;
+  display: block;
+}
+
+.planet-section .greenland-label {
+  top: 45%;
+  left: 41%;
+  display: block;
+}
+
+.planet-section .iceland-label {
+  bottom: 40%;
+  left: 32%;
+  display: block;
+}
+
+.planet-section .norway-label {
+  bottom: 30%;
+  right: 45%;
+  display: block;
+}
+
+.planet-section .spitzberg-label {
+  bottom: 55%;
+  left: 59%;
+  display: block;
+}
+
+.planet-section .sweden-label {
+  bottom: 30%;
+  right: 30%;
+  display: block;
+}
+
+.planet-section .countryCardName {
+  margin-top: 25px;
+}
+
+.planet-section .stars {
+  margin: 25px 0;
+}
+
+.planet-section .stars img {
+  height: 14px;
+  margin-right: 4px;
+}
+
+.planet-section .stars span {
+  font-weight: 500;
+  margin-left: 20px;
+}
+
+.planet-section .expert {
+  margin-top: 20px;
+  border-radius: 50%;
+}
+
+.planet-section .expertImg {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.planet-section .expert img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.planet-section .expertName {
+  margin-left: 30px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.planet-section .company {
+  margin-top: 10px;
+  color: #96daf0;
+  font-size: 14px;
+}
+
+@media screen and (min-width: 1120px) {
+  .planet-section .sub-title-big, .planet-section .main-title-big {
+    display: block;
+  }
+  .planet-section .right-area {
+    min-width: 41.666667%;
+  }
+  .planet-section .world-right {
+    margin-top: 0px;
+    padding-left: 80px;
+  }
+  .planet-section .right-item {
+    max-width: calc(100% - 80px);
+  }
+  .planet-section .right-item .item-image {
+    height: 200px;
+  }
+  .planet-section .right-item .item-image img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+}
+
+@media screen and (max-width: 1119px) {
+  .planet-section .custom-dropdown {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .planet-section .world-left {
+    width: 400px;
+  }
+  .planet-section .right-item {
+    padding: 20px;
+    right: 50%;
+    -webkit-transform: translate(50%, 0);
+            transform: translate(50%, 0);
+  }
+  .planet-section .right-item .stars {
+    margin: 15px 0 0 0;
+  }
+  .planet-section .country {
+    pointer-events: none;
+  }
+  .planet-section .country-label {
+    display: none;
+  }
+  .planet-section .russia {
+    display: block;
+    top: 5.5%;
+    right: 6%;
+    width: 46%;
+    z-index: 5;
+  }
+  .planet-section .alaska {
+    display: block;
+    top: 4%;
+    left: 33%;
+    width: 14%;
+    z-index: 11;
+  }
+  .planet-section .canada {
+    display: block;
+    top: 11.5%;
+    left: 4.1%;
+    width: 41%;
+    z-index: 10;
+  }
+  .planet-section .finland {
+    display: block;
+    top: 51.8%;
+    left: 61.5%;
+    width: 7%;
+    z-index: 99;
+  }
+  .planet-section .greenland {
+    display: block;
+    top: 35.5%;
+    left: 27.9%;
+    width: 23%;
+    z-index: 11;
+  }
+  .planet-section .iceland {
+    display: block;
+    left: 40%;
+    bottom: 37.7%;
+    width: 6%;
+    z-index: 11;
+  }
+  .planet-section .norway {
+    display: block;
+    left: 54.9%;
+    bottom: 19.5%;
+    width: 12%;
+    z-index: 11;
+  }
+  .planet-section .spitzberg {
+    display: block;
+    left: 54.9%;
+    bottom: 49%;
+    width: 4.3%;
+    z-index: 11;
+  }
+  .planet-section .sweden {
+    display: block;
+    left: 57.9%;
+    bottom: 19.5%;
+    width: 6.7%;
+    z-index: 11;
+  }
+}
+/*# sourceMappingURL=HomeEarth.css.map */

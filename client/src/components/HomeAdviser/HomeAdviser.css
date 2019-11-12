@@ -1,0 +1,135 @@
+.smTitle {
+  font-size: 1rem;
+  color: #96daf0;
+  letter-spacing: 0.4375rem;
+  margin-top: 7rem;
+}
+
+.bigTitle {
+  color: #242a3a;
+  margin-bottom: 4.5rem;
+}
+
+.AdviserBox {
+  margin-top: 20px;
+}
+
+.leftCol {
+  padding: 0px !important;
+}
+
+.rightCol {
+  padding: 0px !important;
+}
+
+.leftAdviser {
+  width: 100%;
+  height: 450px;
+  position: relative;
+}
+
+.leftAdviser img {
+  width: 100%;
+  height: 100%;
+}
+
+.rightAdviser {
+  width: 100%;
+  height: 450px;
+  background: #242a3a;
+}
+
+.AdviserDes {
+  position: absolute;
+  top: 15%;
+  left: 10%;
+}
+
+.AdviserDes h2 {
+  color: #242a3a;
+}
+
+.AdviserDes p {
+  font-size: 1rem;
+  color: #242a3a;
+}
+
+.AdviserBtn {
+  position: absolute;
+  top: 70%;
+  left: 10%;
+  width: 35%;
+  height: 12%;
+  border: 1px solid #242a3a;
+  text-align: center;
+  line-height: 50px;
+}
+
+.AdviserBtn:hover {
+  cursor: pointer;
+  background: #242a3a;
+  color: #fff;
+}
+
+.rightAdviser .slick-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 380px;
+  height: 400px;
+}
+
+.rightAdviser .slick-list h3 {
+  margin-top: 10px;
+  color: #fff;
+  text-align: center;
+}
+
+.rightAdviser .slick-list img {
+  border-radius: 50%;
+  margin: auto;
+}
+
+.rightAdviser .slick-list .sliderDes1 {
+  color: #96daf0;
+  text-align: center;
+}
+
+.rightAdviser .slick-list .sliderDes2 {
+  color: #fff;
+  text-align: center;
+}
+
+.rightAdviser .slick-dots li button {
+  background-color: #fff !important;
+  border: #fff;
+  border-radius: 50%;
+  margin-top: 0.5px;
+  margin-left: 2.5px;
+  width: 16px;
+  height: 16px;
+}
+
+.rightAdviser .slick-arrow {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  .smTitle {
+    margin-top: 3.5rem;
+  }
+  .rightAdviser .slick-list {
+    width: 540px;
+  }
+}
+/*# sourceMappingURL=HomeAdviser.css.map */
