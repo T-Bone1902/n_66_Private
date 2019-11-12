@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Slider from "react-slick";
 import { Container, Row, Col, Tabs, Tab, Card } from 'react-bootstrap';
 import './ProductCarousel.css';

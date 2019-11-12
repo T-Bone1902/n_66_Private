@@ -9,6 +9,7 @@ import Home from "./pages/Home/Home";
 // import TripDesNav from "./components/TripDesNav/TripDesNav";
 // import CommentHeader from "./components/CommentHeader/CommentHeader";
 import Login from "./pages/Login/Login";
+import ProductList from './pages/ProductList/ProductList';
 
 // test
 // import RegisterTest from "./components/RegisterTest/RegisterTest";
@@ -43,6 +44,7 @@ class App extends Component {
           )}
         />
         <Route path="/" exact component={Home} />
+        <Route path="/products" exact component={ProductList} />
       </Switch>
     );
   }
