@@ -6,7 +6,8 @@ class ProductList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      ProductsData: []
+      ProductsData: [],
+      
     };
   }
 
@@ -23,24 +24,23 @@ class ProductList extends React.Component {
         // return console.log(response);
       })
       .then(json => {
-        this.setState({ ProductsData: json });
+
+        this.setState({ 
+          ProductsData: json,
+        });
+
       });
   }
 
   render() {
+
+
       
     return (
       <>
         <NavBar />
         <ProductLeftMenu  data={this.state.ProductsData}/>
-        {/* <div className="mt-5 pt-5">
-          {this.state.ProductsData.map(item => (
-            <h3 key={item.product_id} className="text-center mt-5 pt-5">
-              {item.product_name}
-              {item.product_id}
-            </h3>
-          ))}
-        </div> */}
+        
       </>
     );
   }

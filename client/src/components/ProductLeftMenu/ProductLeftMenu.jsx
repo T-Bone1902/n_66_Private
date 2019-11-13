@@ -65,7 +65,7 @@ class ProductLeftMenu extends Component {
                     </div>
 
                     <div className="product-fake-nav">
-                            <a className="filterToggler ml-auto d-flex justify-content-center align-items-center" role="button">
+                            <a href="#666" className="filterToggler ml-auto d-flex justify-content-center align-items-center" role="button">
                                 <div className="toggle-inner ">
                                     <div className="white-line up-line"></div>
                                     <div className="white-line down-line"></div>
@@ -290,7 +290,7 @@ class ProductLeftMenu extends Component {
                                         <Col sm={6} lg={4} >
                                             <Card key={item.product_id} className="product-card">
                                                 <div className="photoFrame">
-                                                    <Card.Img variant="top" src="http://localhost:3000/images/products/AquaMarinaBettaHM/AquaMarinaBettaHM.jpg" />
+                                                    <Card.Img variant="top" src={"http://localhost:3000/images/products/" + item.product_file_name + "/" + JSON.parse(item.product_pictures)[0]} />
                                                 </div>
                                                 <Card.Body>
                                                     <Card.Title>{item.product_name}</Card.Title>

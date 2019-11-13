@@ -4,22 +4,52 @@ import { Container, Row, Col, Tabs, Tab, Card } from "react-bootstrap";
 import "./ProductCarousel.css";
 
 class ProductCarousel extends React.Component {
+
   constructor(props) {
     super(props);
     this.state = {
-      // nav1: null,
-      // nav2: null
+      nav1: null,
+      nav2: null,
+      productPics: props.pics,
+      data: props.data
     };
   }
 
   componentDidMount() {
+
     this.setState({
       nav1: this.slider1,
-      nav2: this.slider2
+      nav2: this.slider2,
     });
   }
 
+
+  sliders() {
+    return this.props.pics.map(item => (
+        
+            <div key={item} className="pic">
+                <img alt="image" src={"http://localhost:3000/images/products/" + this.props.data[0].product_file_name + "/" + item} />
+            </div>
+        
+    ));
+}
+
+
+sliders2() {
+  return this.props.pics.map(item => (
+      
+          <div key={item} className="pic2">
+              <img alt="image" src={"http://localhost:3000/images/products/" + this.props.data[0].product_file_name + "/" + item} />
+          </div>
+      
+  ));
+}
+
   render() {
+
+    const  {data} = this.props;
+
+
     const mainSettings = {
       // dots: false,
       // infinite: true,
@@ -35,78 +65,35 @@ class ProductCarousel extends React.Component {
       slidesToShow: 4,
       slidesToScroll: 1,
       vertical: true,
-      verticalSwiping: true
+      verticalSwiping: true,
+      autoplay:true,
+      autoplaySpeed: 1000
     };
 
-    //
-    const { data } = this.props;
-    console.log(data);
     return (
       <>
+      
         <Container className="ProductCarousel">
           <Row className="mt-5 carouselsRow">
             <Col md={8} className="d-flex justify-content-center">
               <div className="mr-5 sideCarousel">
-                <Slider
-                  {...thumbSettings}
-                  className="thumbCarousel"
-                  asNavFor={this.state.nav2}
-                  ref={slider => (this.slider1 = slider)}
-                  swipeToSlide={true}
-                  focusOnSelect={true}
-                >
-                  <div className="pic">
-                    <img
-                      src="http://localhost:3000/images/products/AquaMarinaBettaHM/AquaMarinaBettaHM.jpg"
-                      alt="AquaMarinaBettaHM"
-                    />
-                  </div>
-                  <div className="pic">
-                    <img
-                      src="http://localhost:3000/images/products/AquaMarinaBettaHM/41DLXCwR5JL._AC_SL1000_.jpg"
-                      alt="AquaMarinaBettaHM"
-                    />
-                  </div>
-                  <div className="pic">
-                    <img
-                      src="http://localhost:3000/images/products/AquaMarinaBettaHM/41rho+I3ahL._AC_SL1000_.jpg"
-                      alt="AquaMarinaBettaHM"
-                    />
-                  </div>
-                  <div className="pic">
-                    <img
-                      src="http://localhost:3000/images/products/AquaMarinaBettaHM/51BdzZfQw9L._AC_SL1000_.jpg"
-                      alt="AquaMarinaBettaHM"
-                    />
-                  </div>
-                  <div className="pic">
-                    <img
-                      src="http://localhost:3000/images/products/AquaMarinaBettaHM/51IDb-O1pML._AC_SL1000_.jpg"
-                      alt="AquaMarinaBettaHM"
-                    />
-                  </div>
-                  <div className="pic">
-                    <img
-                      src="http://localhost:3000/images/products/AquaMarinaBettaHM/51L+SY7tg2L._AC_SL1000_.jpg"
-                      alt="AquaMarinaBettaHM"
-                    />
-                  </div>
-                  <div className="pic">
-                    <img
-                      src="http://localhost:3000/images/products/AquaMarinaBettaHM/51m+z4wrBbL._AC_SL1000_.jpg"
-                      alt="AquaMarinaBettaHM"
-                    />
-                  </div>
-                  <div className="pic">
-                    <img
-                      src="http://localhost:3000/images/products/AquaMarinaBettaHM/51mgLZ2YjBL._AC_SL1000_.jpg"
-                      alt="AquaMarinaBettaHM"
-                    />
-                  </div>
-                </Slider>
+
+                
+                  <Slider
+                    {...thumbSettings}
+                    className="thumbCarousel"
+                    asNavFor={this.state.nav2}
+                    ref={slider => (this.slider1 = slider)}
+                    swipeToSlide={true}
+                    focusOnSelect={true}
+                  >
+                    {this.sliders()}
+                  </Slider>
+                
               </div>
 
               <div className="">
+              
                 <Slider
                   {...mainSettings}
                   className="mainCarousel"
@@ -115,55 +102,9 @@ class ProductCarousel extends React.Component {
                   swipeToSlide={true}
                   focusOnSelect={true}
                 >
-                  <div className="pic2">
-                    <img
-                      src="http://localhost:3000/images/products/AquaMarinaBettaHM/AquaMarinaBettaHM.jpg"
-                      alt="AquaMarinaBettaHM"
-                    />
-                  </div>
-                  <div className="pic2">
-                    <img
-                      src="http://localhost:3000/images/products/AquaMarinaBettaHM/41DLXCwR5JL._AC_SL1000_.jpg"
-                      alt="AquaMarinaBettaHM"
-                    />
-                  </div>
-                  <div className="pic2">
-                    <img
-                      src="http://localhost:3000/images/products/AquaMarinaBettaHM/41rho+I3ahL._AC_SL1000_.jpg"
-                      alt="AquaMarinaBettaHM"
-                    />
-                  </div>
-                  <div className="pic2">
-                    <img
-                      src="http://localhost:3000/images/products/AquaMarinaBettaHM/51BdzZfQw9L._AC_SL1000_.jpg"
-                      alt="AquaMarinaBettaHM"
-                    />
-                  </div>
-                  <div className="pic2">
-                    <img
-                      src="http://localhost:3000/images/products/AquaMarinaBettaHM/51IDb-O1pML._AC_SL1000_.jpg"
-                      alt="AquaMarinaBettaHM"
-                    />
-                  </div>
-                  <div className="pic2">
-                    <img
-                      src="http://localhost:3000/images/products/AquaMarinaBettaHM/51L+SY7tg2L._AC_SL1000_.jpg"
-                      alt="AquaMarinaBettaHM"
-                    />
-                  </div>
-                  <div className="pic2">
-                    <img
-                      src="http://localhost:3000/images/products/AquaMarinaBettaHM/51m+z4wrBbL._AC_SL1000_.jpg"
-                      alt="AquaMarinaBettaHM"
-                    />
-                  </div>
-                  <div className="pic2">
-                    <img
-                      src="http://localhost:3000/images/products/AquaMarinaBettaHM/51mgLZ2YjBL._AC_SL1000_.jpg"
-                      alt="AquaMarinaBettaHM"
-                    />
-                  </div>
+                  {this.sliders2()}
                 </Slider>
+               
               </div>
             </Col>
 
@@ -266,6 +207,7 @@ class ProductCarousel extends React.Component {
             </Col>
           </Row>
         </Container>
+        
       </>
     );
   }

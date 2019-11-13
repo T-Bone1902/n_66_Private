@@ -1,14 +1,15 @@
 import React from "react";
 import NavBar from '../../components/NavBar/NavBar';
 import ProductCarousel from '../../components/ProductCarousel/ProductCarousel';
-// import ProductLeftMenu from '../../components/ProductLeftMenu/ProductLeftMenu';
+
 
 
 class ProductDetail extends React.Component {
     constructor(props) {
         super(props);
         this.state = { 
-            ProductsDetail: []
+            ProductsDetail: [],
+            Pictures: []
          }
     }
 
@@ -23,7 +24,20 @@ class ProductDetail extends React.Component {
               // return console.log(response);
             })
             .then(json => {
-              this.setState({ ProductsDetail: json });
+
+
+              let picsJsonString = json.map(item=>(
+                item.product_pictures
+              ))
+
+              let picArray = JSON.parse(picsJsonString);
+
+              // console.log(picArray)
+      
+              this.setState({
+                 ProductsDetail: json,
+                 Pictures: picArray 
+              });
             });
     }
 
@@ -31,8 +45,8 @@ class ProductDetail extends React.Component {
         return ( 
             <>
                 <NavBar/>
-                <ProductCarousel data={this.state.ProductsDetail}/>
-                
+                <ProductCarousel data={this.state.ProductsDetail}  pics={this.state.Pictures}/>
+                <h1>{this.state.Pictures}</h1>
             </>
         );
     }
