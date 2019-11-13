@@ -1,47 +1,49 @@
 import React from "react";
-import NavBar from '../../components/NavBar/NavBar';
-// import ProductCarousel from '../../components/ProductCarousel/ProductCarousel';
+import NavBar from "../../components/NavBar/NavBar";
+import ProductLeftMenu from '../../components/ProductLeftMenu/ProductLeftMenu';
 
 class ProductList extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            ProductsData: '[]'
-        }
-    }
+  constructor(props) {
+    super(props);
+    this.state = {
+      ProductsData: []
+    };
+  }
 
-    componentDidMount() {
+  componentDidMount() {
+    fetch("http://localhost:3001/products", {
+      // body: JSON.stringify({}),
+      headers: {
+        "content-type": "application/json"
+      },
+      method: "get"
+    })
+      .then(response => {
+        return response.json();
+        // return console.log(response);
+      })
+      .then(json => {
+        this.setState({ ProductsData: json });
+      });
+  }
 
-        fetch('/products', {
-
-            // body: JSON.stringify({}),
-            headers: {
-                'content-type': 'application/json'
-            },
-            method: 'get'
-        })
-            .then(response => {
-                // return response.json();
-                return console.log(response);
-            })
-            // .then(json => {
-            //     this.setState({ ProductsData: json });
-            // })
-    }
-
-    render() {
-        return (
-            <>
-                <NavBar />
-                {/* <ProductCarousel /> */}
-                <div className="mt-5 pt-5">
-                    <h3 className="text-center mt-5 pt-5">
-                        {this.state.ProductsData}
-                    </h3>
-                </div>
-            </>
-        );
-    }
+  render() {
+      
+    return (
+      <>
+        <NavBar />
+        <ProductLeftMenu  data={this.state.ProductsData}/>
+        {/* <div className="mt-5 pt-5">
+          {this.state.ProductsData.map(item => (
+            <h3 key={item.product_id} className="text-center mt-5 pt-5">
+              {item.product_name}
+              {item.product_id}
+            </h3>
+          ))}
+        </div> */}
+      </>
+    );
+  }
 }
 
 export default ProductList;

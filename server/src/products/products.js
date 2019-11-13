@@ -5,32 +5,45 @@ const moment = require("moment-timezone");
 const bluebird = require('bluebird');
 
 const db = mysql.createConnection({
-  
   host: "localhost",
-  user: "",
-  password: "",
+  user: "root",
+  password: "root",
   database: "n_66"
 });
 
 router.get("/products", (req, res) => {
-  const sql = "SELECT * FROM `products`";
+  const sql = "SELECT * FROM `product_list`";
+
   db.query(sql, (error, results, fields) => {
     if (error) throw error;
-    res.json(results)
-	});
+    // console.log(results);
+    res.json( results);
+  });
+  
+});
+
+router.get("/products/:id", (req, res) => {
+  const sql = "SELECT * FROM `product_list`";
+
+  db.query(sql, (error, results, fields) => {
+    if (error) throw error;
+    // console.log(results);
+    res.json( results);
+  });
+  
 });
    
 //細節
-router.get('/products/:id',(req,res,next)=>{
-	let id=req.params.id;
+// router.get('/products/:id',(req,res,next)=>{
+// 	let id=req.params.id;
 	 
-	const sql=`SELECT * FROM trip_list WHERE product_id=${id}`
-	db.query(sql,(err,results,fields)=>{
-		 if(err) throw err; 
-		//  console.log(results) 
-		 res.send(JSON.stringify(results))
-	}) 
-});
+// 	const sql=`SELECT * FROM trip_list WHERE product_id=${id}`
+// 	db.query(sql,(err,results,fields)=>{
+// 		 if(err) throw err; 
+// 		//  console.log(results) 
+// 		 res.send(JSON.stringify(results))
+// 	}) 
+// });
 
 //搜尋
 // router.post('/products/search',(req,res,next)=>{
