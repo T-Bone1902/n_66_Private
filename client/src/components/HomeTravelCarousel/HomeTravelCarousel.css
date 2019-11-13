@@ -21,9 +21,9 @@
   display: block;
   position: absolute;
   left: 0;
-  top: 0;
+  top: 35px;
   height: 570px;
-  width: 400px;
+  width: 40%;
   background-color: #242a3a;
 }
 
@@ -31,13 +31,12 @@
   height: 570px;
   width: 100%;
   color: #242a3a;
-  overflow-x: hidden;
   position: relative;
 }
 
 .travelCarouselContainer .rectNavyBlue .slider-container {
   position: absolute;
-  width: 95%;
+  width: 80%;
   margin-top: 5%;
   margin-right: 0;
   margin-left: 20%;
@@ -52,7 +51,7 @@
 }
 
 .travelCarouselContainer .rectNavyBlue .main-slide .slick-track {
-  height: 405px;
+  height: 570px;
 }
 
 .travelCarouselContainer .rectNavyBlue .main-slide .tavel-card {
@@ -64,6 +63,8 @@
   -webkit-transition: 0.3s;
   transition: 0.3s;
   text-decoration: none !important;
+  height: 405px;
+  width: 319px;
 }
 
 .travelCarouselContainer .rectNavyBlue .main-slide .tavel-card .card-img-top {
@@ -142,7 +143,7 @@
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
   position: absolute;
-  bottom: 20px;
+  bottom: 25%;
   left: -15%;
   width: 90px;
 }

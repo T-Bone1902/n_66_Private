@@ -23,9 +23,9 @@ $secColor: #96daf0;
     display: block;
     position: absolute;
     left: 0;
-    top: 0;
+    top: 35px;
     height: 570px;
-    width: 400px;
+    width: 40%;
     background-color: $primaryColor;
   }
 
@@ -33,12 +33,12 @@ $secColor: #96daf0;
     height: 570px;
     width: 100%;
     color: $primaryColor;
-    overflow-x: hidden;
+    // overflow-x: hidden;
     position: relative;
 
     .slider-container {
       position: absolute;
-      width: 95%;
+      width: 80%;
       margin-top: 5%;
       margin-right: 0;
       margin-left: 20%;
@@ -55,7 +55,7 @@ $secColor: #96daf0;
       }
 
       .slick-track {
-        height: 405px;
+        height: 570px;
         // transition-duration: 1.2s !important;
       }
 
@@ -66,6 +66,8 @@ $secColor: #96daf0;
         box-shadow: 3px 3px 8px rgb(105, 105, 105);
         transition: 0.3s;
         text-decoration: none !important;
+        height: 405px;
+        width: 319px;
 
         .card-img-top {
           position: relative;
@@ -148,7 +150,7 @@ $secColor: #96daf0;
   .sub-slide {
     transform: rotate(180deg);
     position: absolute;
-    bottom: 20px;
+    bottom: 25%;
     left: -15%;
     width: 90px;
 
