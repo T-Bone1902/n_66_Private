@@ -56,10 +56,11 @@
 
 .travelCarouselContainer .rectNavyBlue .main-slide .tavel-card {
   border: none;
+  border-radius: 0;
   margin-left: 20px;
   margin-right: 20px;
-  -webkit-box-shadow: 3px 3px 8px dimgray;
-          box-shadow: 3px 3px 8px dimgray;
+  -webkit-box-shadow: 3px 3px 8px rgba(105, 105, 105, 0.616);
+          box-shadow: 3px 3px 8px rgba(105, 105, 105, 0.616);
   -webkit-transition: 0.3s;
   transition: 0.3s;
   text-decoration: none !important;
@@ -70,6 +71,7 @@
 .travelCarouselContainer .rectNavyBlue .main-slide .tavel-card .card-img-top {
   position: relative;
   overflow: hidden;
+  border-radius: 0;
 }
 
 .travelCarouselContainer .rectNavyBlue .main-slide .tavel-card .card-img-top img {

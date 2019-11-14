@@ -61,9 +61,10 @@ $secColor: #96daf0;
 
       .tavel-card {
         border: none;
+        border-radius: 0;
         margin-left: 20px;
         margin-right: 20px;
-        box-shadow: 3px 3px 8px rgb(105, 105, 105);
+        box-shadow: 3px 3px 8px rgba(105, 105, 105, 0.616);
         transition: 0.3s;
         text-decoration: none !important;
         height: 405px;
@@ -72,6 +73,7 @@ $secColor: #96daf0;
         .card-img-top {
           position: relative;
           overflow: hidden;
+          border-radius: 0;
 
           img {
             width: 100%;
@@ -237,29 +239,6 @@ $secColor: #96daf0;
       width: 80% !important;
       margin-left: 20% !important;
     }
-  }
-
-  @media screen and(max-width: 918px) {
-    // .slider-container {
-    //   width: 80% !important;
-    //   margin: 0 auto 0 auto !important;
-
-    //   .slick-list{
-    //     width: 80% !important;
-
-    //     .slick-track{
-    //       width: 80% !important;
-    //     }
-    //   }
-
-    //   .tavel-card{
-    //     // width: 100% !important;
-    //   }
-
-    //   .sub-slide{
-    //     display: none !important;
-    //   }
-    // }
   }
 
   @media screen and(max-width: 678px) {
