@@ -6,7 +6,7 @@ $borderColor: #74767d;
   position: relative;
   padding: 0;
   height: 100vh;
-  margin: 5rem 0 5rem 0;
+  margin: 18rem 0 0 0;
 
   .subtitle {
     color: $secColor;
@@ -192,7 +192,7 @@ $borderColor: #74767d;
 
   @media screen and(max-width: 992px) {
     
-      height: 150vh !important;
+      // height: 150vh !important;
       margin-bottom: 0 !important;
     
 

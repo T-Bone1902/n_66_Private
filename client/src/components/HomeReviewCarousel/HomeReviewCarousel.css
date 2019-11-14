@@ -2,7 +2,7 @@
   position: relative;
   padding: 0;
   height: 100vh;
-  margin: 5rem 0 5rem 0;
+  margin: 18rem 0 0 0;
 }
 
 .SectionReviewCarousel .subtitle {
@@ -202,7 +202,6 @@
 
 @media screen and (max-width: 992px) {
   .SectionReviewCarousel {
-    height: 150vh !important;
     margin-bottom: 0 !important;
   }
   .SectionReviewCarousel .BlueBlock {
