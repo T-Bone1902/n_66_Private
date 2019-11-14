@@ -177,7 +177,7 @@
   left: 100%;
   -webkit-transition: .5s;
   transition: .5s;
-  z-index: 901;
+  z-index: 999;
 }
 
 .ProductLeftMenuContainer .product-filter-menu .product-fake-nav {
